@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#fff",
-        alignItems: "center",
-        marginTop: 80,
+        marginTop: "5%",
+        marginBottom: "15%",
     },
     input: {
         height: 50,
