@@ -1,19 +1,11 @@
 import React from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
 
-export default function TextContainer() {
-    const [text, onChangeText] = React.useState(
-        "Lorem ipsum dolor sit amet..."
-    );
-
+export default function TextContainer({ getTextChange }) {
     return (
         <View style={styles.container}>
             <Text>Enter in the text below!</Text>
-            <TextInput
-                style={styles.input}
-                onChangeText={onChangeText}
-                value={text}
-            />
+            <TextInput style={styles.input} onChangeText={getTextChange} />
         </View>
     );
 }

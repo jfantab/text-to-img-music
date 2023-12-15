@@ -1,12 +1,18 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useEffect } from "react";
+import { StyleSheet, View } from "react-native";
 import ImageContainer from "@components/ImageContainer";
+import AudioContainer from "@components/AudioContainer";
 
-export default function ResultScreen() {
+export default function ResultScreen({ route }) {
+    const imgPath = "downloadedImage.png";
+    const audioPath = "downloadedAudio.wav";
+    const ttsPath = "downloadedTTS.wav";
+
     return (
         <View style={styles.container}>
-            <Text>This is results</Text>
-            <ImageContainer path="../../assets/img/dog.jpeg" />
+            <ImageContainer path={imgPath} />
+            <AudioContainer title="Play music" fileName={audioPath} />
+            <AudioContainer title="Play TTS" fileName={ttsPath} />
         </View>
     );
 }
